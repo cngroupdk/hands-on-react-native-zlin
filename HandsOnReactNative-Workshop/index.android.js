@@ -22,7 +22,7 @@ export default class AwesomeProject extends Component {
       <View style={styles.hastagWrapper} key={index}>
         <Text style={styles.hastagTitle}>#{groupTitle}</Text>
         {tweets.map((tweet, index) =>
-          <TweetCell tweetText={tweet.text} key={index} />
+          <TweetCell tweet={tweet} tweetText={tweet.text} key={index} />
         )}
       </View>
     );

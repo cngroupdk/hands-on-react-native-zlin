@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Image,
   StyleSheet,
   Text,
   View,
@@ -7,12 +8,25 @@ import {
 
 export class TweetCell extends Component {
   render() {
-    const tweetText = this.props.tweetText;
+    const { tweet } = this.props;
+    const {
+      text,
+      user,
+    } = tweet;
+    const {
+      profile_image_url_https
+    } = user;
     return (
       <View style={styles.wrapper}>
-        <Text style={styles.tweetText}>
-          {tweetText}
-        </Text>
+        <Image
+          style={{width: 50, height: 50}}
+          source={{uri: profile_image_url_https}}
+        />
+        <View style={{ flex: 1 }}>
+          <Text style={styles.tweetText}>
+            {text}
+          </Text>
+        </View>
       </View>
     );
   }
@@ -21,6 +35,7 @@ export class TweetCell extends Component {
 const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: 'white',
+    flexDirection: 'row',
   },
   tweetText: {
     color: 'black',

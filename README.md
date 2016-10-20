@@ -1,4 +1,4 @@
-# Hands on React Native
+# Hands on React Native Zlin
 
 ## About
 

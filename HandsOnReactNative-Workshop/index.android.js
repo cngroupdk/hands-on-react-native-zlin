@@ -21,7 +21,7 @@ export default class AwesomeProject extends Component {
     return (
       <View style={styles.hastagWrapper}  key={index}>
         <Text style={styles.hastagTitle}>#{groupTitle}</Text>
-        <TweetCell />
+        <TweetCell tweetText={'Hello from ' + groupTitle} />
       </View>
     );
   }

@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView,
 } from 'react-native';
 
 import DATA from './simple.json';
@@ -30,11 +31,13 @@ export default class AwesomeProject extends Component {
   render() {
     const groups = Object.keys(DATA.groups);
     return (
-      <View style={styles.container}>
-        {groups.map((groupTitle, index) =>
-          this.renderTag(groupTitle, index, DATA.groups[groupTitle])
-        )}
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          {groups.map((groupTitle, index) =>
+            this.renderTag(groupTitle, index, DATA.groups[groupTitle])
+          )}
+        </View>
+      </ScrollView>
     );
   }
 }

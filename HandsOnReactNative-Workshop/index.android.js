@@ -17,11 +17,13 @@ import DATA from './simple.json';
 import { TweetCell } from './components/TweetCell';
 
 export default class AwesomeProject extends Component {
-  renderTag(groupTitle, index) {
+  renderTag(groupTitle, index, tweets) {
     return (
-      <View style={styles.hastagWrapper}  key={index}>
+      <View style={styles.hastagWrapper} key={index}>
         <Text style={styles.hastagTitle}>#{groupTitle}</Text>
-        <TweetCell tweetText={'Hello from ' + groupTitle} />
+        {tweets.map((tweet, index) =>
+          <TweetCell tweetText={tweet.text} key={index} />
+        )}
       </View>
     );
   }
@@ -30,7 +32,7 @@ export default class AwesomeProject extends Component {
     return (
       <View style={styles.container}>
         {groups.map((groupTitle, index) =>
-          this.renderTag(groupTitle, index)
+          this.renderTag(groupTitle, index, DATA.groups[groupTitle])
         )}
       </View>
     );

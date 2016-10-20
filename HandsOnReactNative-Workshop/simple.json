@@ -1,0 +1,71 @@
+{
+  "groups": {
+    "muybueno": [
+      {
+        "_hashtags": [
+          "muybueno"
+        ],
+        "user": {
+          "screen_name": "nacholibreLH",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1477539102/nacho-libre_normal.jpg"
+        },
+        "text": "#MuyBueno React Native! #HandsOnRN",
+        "created_at": "Thu Oct 20 14:08:02 +0000 2016"
+      }
+    ],
+    "final": [
+      {
+        "_hashtags": [
+          "final"
+        ],
+        "user": {
+          "screen_name": "heracek",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/21852372/g4qMbKQ-J0u_Ymb_Q2ZcBmILbNWVOVbKzmexb02mHj-C2PVVoAj7tT4qvMOZ-0ff_normal.jpg"
+        },
+        "text": "#final preparations for #HandsOnRN",
+        "created_at": "Thu Oct 20 14:03:50 +0000 2016"
+      }
+    ],
+    "megusto": [
+      {
+        "_hashtags": [
+          "megusto"
+        ],
+        "user": {
+          "screen_name": "nacholibreLH",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1477539102/nacho-libre_normal.jpg"
+        },
+        "text": "#MeGusto React Native! Muy bueno. #HandsOnRn",
+        "created_at": "Thu Oct 20 13:57:27 +0000 2016"
+      },
+      {
+        "_hashtags": [
+          "megusto"
+        ],
+        "user": {
+          "screen_name": "nacholibreLH",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1477539102/nacho-libre_normal.jpg"
+        },
+        "text": "#MeGusto React Native and #HandsOnRn",
+        "created_at": "Wed Oct 19 21:42:46 +0000 2016"
+      }
+    ],
+    "lookingforward": [
+      {
+        "_hashtags": [
+          "lookingforward",
+          "handson",
+          "reactnative",
+          "zlin"
+        ],
+        "user": {
+          "screen_name": "heracek",
+          "profile_image_url_https": "https://pbs.twimg.com/profile_images/21852372/g4qMbKQ-J0u_Ymb_Q2ZcBmILbNWVOVbKzmexb02mHj-C2PVVoAj7tT4qvMOZ-0ff_normal.jpg"
+        },
+        "text": "#LookingForward for tomorrow #HandsOn #ReactNative #HandsOnRn in #Zlin",
+        "created_at": "Wed Oct 19 21:39:08 +0000 2016"
+      }
+    ]
+  },
+  "filename": "2016-10-20-07-49-01-simple.json"
+}

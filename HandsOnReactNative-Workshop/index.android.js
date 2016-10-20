@@ -12,12 +12,20 @@ import {
   View
 } from 'react-native';
 
+import DATA from './simple.json';
+
 export default class AwesomeProject extends Component {
   render() {
+    const groups = Object.keys(DATA.groups);
     return (
       <View style={styles.container}>
+        {groups.map((groupTitle, index) =>
+          <View key={index}>
+            <Text>{groupTitle}</Text>
+          </View>
+        )}
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          {groups.join(', ')}
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js

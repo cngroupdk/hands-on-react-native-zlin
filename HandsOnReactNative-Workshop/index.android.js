@@ -13,21 +13,29 @@ import {
 } from 'react-native';
 
 import DATA from './simple.json';
+
+import { TweetCell } from './components/TweetCell';
+
 export default class AwesomeProject extends Component {
+  renderTag(groupTitle, index) {
+    return (
+      <View style={styles.hastagWrapper}  key={index}>
+        <Text style={styles.hastagTitle}>#{groupTitle}</Text>
+        <TweetCell />
+      </View>
+    );
+  }
   render() {
     const groups = Object.keys(DATA.groups);
     return (
       <View style={styles.container}>
         {groups.map((groupTitle, index) =>
-          <View style={styles.hastagWrapper}  key={index}>
-            <Text style={styles.hastagTitle}>#{groupTitle}</Text>
-          </View>
+          this.renderTag(groupTitle, index)
         )}
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
   hastagTitle: {
     color: 'white',

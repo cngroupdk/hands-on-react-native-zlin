@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -18,6 +12,24 @@ import DATA from './simple.json';
 import { TweetCell } from './components/TweetCell';
 
 export default class AwesomeProject extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      data: null,
+    };
+  }
+
+  componentDidMount() {
+    return fetch('http://handson.pro/react-native-zlin/api/simple.json').then(
+      response => response.json()
+    ).then(data => this.setState({
+      isLoading: false,
+      data: data,
+    }));
+  }
+
   renderTag(groupTitle, index, tweets) {
     return (
       <View style={styles.hastagWrapper} key={index}>
@@ -28,13 +40,21 @@ export default class AwesomeProject extends Component {
       </View>
     );
   }
+
   render() {
-    const groups = Object.keys(DATA.groups);
+    const { isLoading, data } = this.state;
+    console.log('--- data:', data);
+
+    if (isLoading) {
+      return <Text>Loading...</Text>;
+    }
+
+    const groups = Object.keys(data.groups);
     return (
       <ScrollView>
         <View style={styles.container}>
           {groups.map((groupTitle, index) =>
-            this.renderTag(groupTitle, index, DATA.groups[groupTitle])
+            this.renderTag(groupTitle, index, data.groups[groupTitle])
           )}
         </View>
       </ScrollView>
